@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+
+<body>
+    <script>
+
+        //task 1
+
+        let digit = {
+          number: Math.round(Math.random() * 999), 
+          units: 0,
+          tens: 0,
+          hundreds: 0,
+        };
+        if (digit.number <= 9){
+          digit.units = digit.number;
+        } else if (digit.number <= 999){
+          digit.units = Math.floor(digit.number % 10);
+          digit.tens = Math.floor(digit.number / 10 % 10);
+          digit.hundreds = Math.floor(digit.number / 100 % 10);
+        }else {
+            digit.number = 0;
+            console.log('Вы ввели число за диапазоном 0 - 999');
+        }
+        console.log(digit);
+        
+        //task 2 
+        
+        let basket[]
+        
+
+        basket.push(name, price)
+
+        let basket_price = 0
+
+        Basket = [{
+                    name: "item1",
+                    price: '55'
+                }, {
+                    name: "item2",
+                    price: '300'
+                };
+                Basket.push({
+                    name,
+                    price:
+                });
+
+                function countBasketPrice(x) {
+                    for (i = 0; i < Basket.length; i++) {
+                        basket_price = basket_price + Basket[i].price;
+                    }
+                    return basket_price;
+                }
+
+                console.log("Total cost: " + basketPrice);
+        
+    </script>
+
+</body>
+
+</html>
