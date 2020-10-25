@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.padding-site {
+    padding-left: 98px;
+    padding-right: 98px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.menu-list {
+    list-style-type: none;
+    float: left;
+}
+
+.menu-link {
+
+    color: #8c8c8c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 48px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 13px;
+}
+
+
+.menu-link:active {
+    color: #212121;
+    border-bottom: 3px solid #212121;
+
+}
+
+.menu {
+    float: right;
+}
+
+.header {
+    padding-top: 63px;
+}
+
+.menu-two-list {
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 28px;
+    padding-bottom: 29px;
+    float: left;
+
+}
+
+.header-two {
+    margin-top: 29px;
+    background-color: #f4f4f4;
+    height: 70px;
+    width: auto;
+}
+
+.menu-two-link {
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    padding-right: 25px;
+
+}
+
+.menu-two {
+    padding-left: 345px;
+}
+
+.menu-two-link:hover {
+    color: black;
+}
+
+.menu-link:hover {
+    color: black;
+    border-bottom: 1px solid #6c6c6c;
+}
+
+.title {
+    /* Style for "Fishnet Ch" */
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 23px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #e53935;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-bottom: 36px;
+    text-align: center;
+}
+
+.price {
+    color: #212121;
+    font-size: 36px;
+    font-weight: 300;
+    font-size: 48px;
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    width: 499px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+input[type=button] {
+    color: saddlebrown;
+    background-color: white;
+    font-size: 16px;
+    border-color: pink;
+
+}
+
+.button {
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    border-radius: 35px;
+    background-color: #f44336;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4.4px;
+    width: 518px;
+    height: 79px;
+    text-decoration: none;
+    padding-left: 160px;
+    padding-right: 204px;
+    padding-top: 27px;
+    padding-bottom: 28px;
+}
+
+.red {
+    width: 570px;
+    height: 570px;
+}
+
+.col-md-6{
+    float: left;
+}
+
+.slider-product{
+    margin-top: 119px;
+}
+
+.mini{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.four-header {
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+
+}
+
+.four-products {
+    list-style-type: none;
+    float: left;
+    padding-right: 30px;
+    width: 370px;
+    height: 370px;
+    display: flex;
+}
+
+.header-four {
+    padding-bottom: 64px;
+}
+
+.four-pro {
+    margin-top: 5px;
+    list-style-type: none;
+    float: left;
+    padding-right: 30px;
+    width: 370px;
+    height: 370px;
+    display: flex;
+}
+
+.slider-four{
+    margin-top: 245px;
+    padding-left: 98px;
+    padding-right: 98px;   
+}
+
+.side-text{
+    list-style-type: none;
+    text-decoration: none;
+    float: right;
+    display: flex;
+}
+
+.second-button{
+    /* Style for "explore al" */
+color: #212121;
+font-size: 18px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 3.6px;
+   
+}
+
+header-four{
+    position: relative;
+    display: inline-flex;
+}
+
+.button-text{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.button-text:hover{
+    color: gainsboro;
+}
+
+.four-product{
+    padding-right: 10px;
+    padding-bottom: 120px;
+}
+
+footer {
+    background-color: #f7f7f7;
+    width: 1366px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rights {
+    color: #6c6c6c;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-left: 98px;
+    padding-bottom: 39px;
+}
+
+.foot {
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-top: 120px;
+}
+
+.contact-foot {
+    padding-left: 98px;
+    padding-right: 168px;
+}
+
+.footer-menu {
+    display: flex;
+}
+
+.info {
+    padding-right: 263px;
+}
+
+.address {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 300;
+    width: 221px;
+    padding-left: 97px;
+    padding-top: 24px;
+    line-height: 22px;
+    padding-bottom: 77px;
+}
+
+.info-menu {
+
+    list-style-type: none;
+    float: left;
+    position: absolute;
+    top: 158px;
+    left: 405px;
+}
+
+.info-menu-list {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    line-height: 26px;
+}
+
+.info-menu-two {
+    list-style-type: none;
+    float: left;
+    position: absolute;
+    top: 158px;
+    left: 633px;
+}
+
+.last {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 300;
+    width: 363px;
+    line-height: 22px;
+    position: absolute;
+    top: 157px;
+    margin-left: 915px;
+}
+
+.terms {
+    color: #6c6c6c;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    position: absolute;
+    right: 97px;
+    bottom: 39px;
+
+
+}
+
+.social {
+    width: 129px;
+    height: 28px;
+    font-size: 28px;
+    letter-spacing: 5.6px;
+    position: absolute;
+    top: 335px;
+    left: 618px;
+}
+
+.email {
+    background-color: #ffffff;
+    width: 370px;
+    height: 48px;
+    border: 1px solid #d9dee1;
+    background-color: #ffffff;
+    position: absolute;
+    right: 80px;
+    top: 219px;
+}
+
+input[type='email'] {
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: 300;
+    border-color: transparent;
+    padding-top: 15px;
+    padding-left: 19px;
+}
+.info-menu-link{
+    color: black;
+}
+
+.four-products-link:hover{
+  outline: 1px solid black; 
+}
