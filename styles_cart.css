@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+header {
+    background-color: darkgrey;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+.cart_list {
+display: none;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5px;
+
+}
+
+.cart_list.shown {
+    display: inline-block;
+}
+
+.test{
+    color: black;
+}
+
+.btn{
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    display: inline-block;
+    color: black;
+    margin-top: 5px;
+}
