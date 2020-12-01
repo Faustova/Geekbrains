@@ -1,3 +1,4 @@
+//Отправляйте свои данные с помощью $emit в верхний компонент, а вниз с помощью props
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const app = new Vue({
@@ -27,7 +28,7 @@ const app = new Vue({
                        if(find){
                            find.quantity++;
                        } else {
-                           const prod = Object.assign({quantity: 1}, item);//создание нового объекта на основе двух, указанных в параметрах
+                           const prod = Object.assign({quantity: 1}, item);
                            this.cartItems.push(prod)
                        }
                     }
@@ -43,18 +44,19 @@ const app = new Vue({
                             this.cartItems.splice(this.cartItems.indexOf(item), 1);
                         }
                     }
+                    
                 })
         },
         filter(){
             let regexp = new RegExp(this.userSearch, 'i');
-            this.filtered =  this.filtered.filter(el => regexp.test(el.product_name));
+            this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
     mounted(){
         this.getJson(`${API + this.cartUrl}`)
             .then(data => {
                 for (let item of data.contents){
-                    this.cartItems.push(item);
+                    this.$data.cartItems.push(item);
                 }
             });
         this.getJson(`${API + this.catalogUrl}`)
@@ -67,8 +69,8 @@ const app = new Vue({
         this.getJson(`getProducts.json`)
             .then(data => {
                 for(let item of data){
-                    //this.products.push(item);
-                    this.filtered.push(item);
+                    this.$data.products.push(item);
+                    this.$data.filtered.push(item);
                 }
             })
     }
