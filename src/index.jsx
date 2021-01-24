@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import MessageField from './components/MessageField';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import Message from './components/Message';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MessageField />
+    <MessageField/>
   </React.StrictMode>,
   document.getElementById('root')
 );
