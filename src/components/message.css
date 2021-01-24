@@ -1,0 +1,16 @@
+.text-field{
+    margin-left: 50px;
+    padding-top: 10px;
+    color: green;
+}
+
+.button-text{
+    margin-top: 10px;
+    margin-left: 50px;
+    box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	text-shadow:0px 1px 0px #528009;
+}
