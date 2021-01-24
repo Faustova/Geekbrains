@@ -1,5 +1,5 @@
 import React from 'react';
-import Message from './Message';
+//mport Message from './Message';
 
 
 //export default class MessageField extends React.Component {

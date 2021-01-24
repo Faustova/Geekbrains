@@ -14,7 +14,7 @@ export default function Input ({onAddMessage}) {
     }, [onAddMessage, value]);
 
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <input type='text' onChange = {handleChange} value={value}/>
             <input type='submit' />
 

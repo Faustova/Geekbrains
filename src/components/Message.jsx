@@ -5,7 +5,7 @@ import Input from "./input";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-export default function Message(){
+export default function Message() {
     const [messages, setMessages] = useState([
         {text: "message1", author: 'me'},
         {text: "message2", author: 'me'},
@@ -37,7 +37,7 @@ export default function Message(){
 
        return (
            <>
-           {messages.map(this.renderMessage)}
+           {messages.map(renderMessage)}
            <Input onAddMessage={handleAddMessage} />
            </>
        )
