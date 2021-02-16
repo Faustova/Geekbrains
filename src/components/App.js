@@ -1,13 +1,13 @@
 import React from "react";
+import Message from "./messageField";
+import Input from "./input";
 
 import './App.css';
 
-import Message from "./message";
-import Input from "./input";
-
 export default class App extends React.Component {
      state = {
-       messages: [{ author: 'me', text: 'Hi!' }, { author: 'me', text: 'How are you?' }]
+      chats: [{ title: 'Чат 1', messageList: [1] }, { title: 'Чат 2', messageList: [2] }],
+      messages: [{ text: 'message1', author: 'me' }, { text: 'message2', author: 'me' }]
      }
   
      componentWillUnmount() {
@@ -15,26 +15,27 @@ export default class App extends React.Component {
      }
   
      componentDidUpdate(prevProps, prevState) {
-       const lastAuthor = this.state.messages[this.state.messages.length - 1].author;
+      const lastAuthor = this.state.messages[this.state.messages.length - 1].author;
+
   
-       if (prevState.messages.length < lastAuthor !== 'bot' && this.state.messages.length) {
-         this.timeout = setTimeout(() => {
-           this.handleAddMessage('bot', 'Im a robot');
-         }, 1500);
-       }
-     }
+      if (prevState.messages.length < this.state.messages.length && lastAuthor !== 'robot') {
+              this.timeout = setTimeout(() => {
+                 this.handleAddMessage('Im a robot', 'robot');
+               }, 1500);
+             }
+           }
   
      renderMessage = (message, i) => {
        return (
-         <Message message={message} key={i} />
+        <Message message={message} key={i} />
        )
      }
   
-     handleAddMessage = ( author = 'me', text) => {
-       this.setState(state => ({
-         messages: [...state.messages, { author, text }]
-       }));
-     }
+     handleAddMessage = (text, author = 'me') => {
+           this.setState(state => ({
+             messages: [...state.messages, {text, author}]
+           }));
+         }
   
      render() {
        return (

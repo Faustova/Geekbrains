@@ -1,44 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./router.css";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom'
+import Layout from './Layout';
 
-import App from "./App";
-import Profile from "./profile";
-import Chatlist from "./chatlist";
 
-export default function Routes() {
-  return (
-    <>
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Main Chat</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-            <li>
-              <Link to="/chatlist">Chat List</Link>
-            </li>
-          </ul>
-
+export default class Router extends React.Component {
+  render() {
+      return (
           <Switch>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/chatlist">
-              <Chatlist />
-            </Route>
-            <Route exact path="/">
-              <App />
-            </Route>
-            <Route>
-              <div>No such page</div>
-            </Route>
+              <Route exact path='/' component={ Layout } />
+              <Route exact path='/chat/1/' render={ () =>
+                  <Layout chatId={ 1 } /> } />
+              <Route exact path='/chat/2/' render={ () =>
+                  <Layout chatId={ 2 } /> } />
+              <Route exact path='/chat/3/' render={ () =>
+                  <Layout chatId={ 3 } /> } />
           </Switch>
-        </div>
-      </Router>
-    </>
-  );
+      )
+  }
 }

@@ -1,44 +1,83 @@
-import React, { useCallback } from 'react';
-import {
-  Switch,
-  Route,
-  useRouteMatch,
-  useParams,
-  Link
-} from "react-router-dom";
 
-import Topic from './topic';
+import React from 'react';
+import {bindActionCreators} from "redux";
+import connect from 'react-redux/es/connect/connect';
+import { Link } from 'react-router-dom'
+import {TextField } from '@material-ui/core';
+import PropTypes from "prop-types";
+import { addChat } from '../actions/chatActions';
+
+class ChatList extends React.Component {
+   static propTypes = {
+       chats: PropTypes.object.isRequired,
+       addChat: PropTypes.func.isRequired,
+   };
 
 
-const newchatlist = [
-  { id: "1", text: "Group Chat" },
-  { id: "2", text: "Chat with Marry" },
-  { id: "3", text: "Chat with John" },
-];
+   state = {
+    input: '',
+};
 
-export default function Chatlist() {
-  const match = useRouteMatch();
-  console.log(match);
+handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+};
 
-  const renderTopic = useCallback((t) => {
+handleKeyUp = (event) => {
+    if (event.keyCode === 13) { // Enter
+        this.handleAddChat();
+    }
+};
+
+handleAddChat = () => {
+    if (this.state.input.length > 0) {
+        this.props.addChat(this.state.input);
+        this.setState({ input: '' });
+    }
+};
+
+
+
+render() {
+    const { chats } = this.props;
+    const chatElements = Object.keys(chats).map(chatId => (
+        <Link key={ chatId } to={ `/chat/${chatId}` }>
+            <li
+                placeholder= { chats[chatId].title }
+            
+            />
+        </Link>));
+
     return (
-      <div key={t.id}>
-        <Link to={`${match.url}/${t.id}`}>{t.text}</Link>
-      </div>
-    );
-  }, [match]);
+        <ul>
+           { chatElements }
+            <li
 
-  return (
-    <>
-    <h3>All chats</h3>
-      {newchatlist.map(renderTopic)}
-      <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Topic chatlist={newchatlist} />
-        </Route>
-        <Route path={match.path}>
-        </Route>
-      </Switch>
-    </>
-  );
+
+key="Add new chat"
+onClick={ this.handleAddChat }
+style={ { height: '60px' } }
+children= {<TextField
+    key="textField"
+    name="input"
+    placeholder="Add new chat"
+    onChange={ this.handleChange }
+    value={ this.state.input }
+    onKeyUp={ this.handleKeyUp }
+/>}
+/>
+</ul>
+)
 }
+}
+
+const mapStateToProps = ({ chatReducer }) => ({
+  chats: chatReducer.chats,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({ addChat }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChatList);
+
+
+
+
